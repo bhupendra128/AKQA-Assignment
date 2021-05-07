@@ -1,0 +1,195 @@
+/*
+ * Base
+ * @ Reset
+ *
+*/
+
+[tabindex="0"],
+[tabindex="-1"] {
+  &:focus {
+    outline: none;
+  }
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  background: transparent;
+  color: $font-color-default;
+  font-family: $base-font-family;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-size: $base-font-size-mobile;
+
+  letter-spacing: 2px;
+  line-height: $base-line-height-mobile;
+
+  @include desktop {
+    font-size: $base-font-size;
+    letter-spacing: 1.5px;
+    line-height: $base-line-height;
+  }
+}
+
+/*
+ *  HTML5
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/*
+ *  Reset Margins and Paddings
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dd,
+ol,
+ul,
+form,
+fieldset,
+legend,
+table,
+th,
+td,
+caption,
+hr,
+dl,
+dt,
+dd,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+b,
+strong {
+  font-weight: 800;
+}
+
+/*
+ *  Code
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/*
+ *  Quotes
+ */
+
+q {
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+/*
+ *  small
+ */
+
+small {
+  font-size: 80%;
+}
+
+/*
+ *  Sub and Sup
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/*
+ *  Sup
+ */
+
+sup {
+  top: -0.5em;
+}
+
+/*
+ *  Sub
+ */
+
+sub {
+  bottom: -0.25em;
+}
+
+/*
+ *  Progress
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+ * Images Helpers
+ */
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  color: transparent;
+  font-size: 0;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+svg {
+  display: block;
+  pointer-events: none;
+  width: 100%;
+  &.icon {
+    height: 100%;
+    path {
+      fill: inherit;
+    }
+  }
+}
+
+button:disabled,
+button[disabled] {
+  opacity: 0.6;
+  background-color: $button-disabled-color;
+  cursor: auto;
+}

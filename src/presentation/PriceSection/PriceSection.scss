@@ -1,0 +1,31 @@
+@import "../../scss/base/index";
+
+.price-section {
+  margin-bottom: 20px;
+  .sub-total,
+  .vat,
+  .total-cost {
+    display: flex;
+    label {
+      text-align: right;
+      margin-right: 4%;
+      width: 56%;
+      @include desktop {
+        width: 76%;
+      }
+    }
+    .product-price {
+      width: 20%;
+    }
+  }
+  .total-cost {
+    border: 1px solid $primary-color;
+    border-left: none;
+    border-right: none;
+    font-weight: bold;
+  }
+  .sub-section,
+  .total-cost {
+    padding: 5px 0;
+  }
+}

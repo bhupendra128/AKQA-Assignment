@@ -1,0 +1,11 @@
+@import "./scss/base/index";
+
+.app-wrapper {
+  width: 90%;
+  margin: 20px auto 0;
+  max-width: 1320px;
+
+  @include desktop {
+    width: 70%;
+  }
+}

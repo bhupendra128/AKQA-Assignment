@@ -1,0 +1,11 @@
+@import "../../scss/base/index";
+
+.header {
+  margin-bottom: 20px;
+  img {
+    height: 30px;
+    @include desktop {
+      height: 40px;
+    }
+  }
+}

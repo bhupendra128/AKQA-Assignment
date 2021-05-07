@@ -1,0 +1,59 @@
+@import "../../scss/base/index";
+
+.button-wrapper {
+  text-align: right;
+  button {
+    background-color: $button-color;
+    color: $primary-white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    width: 130px;
+    height: 25px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border: 1px solid $primary-white;
+      border-bottom-width: 0;
+      border-left-width: 0;
+      transform: rotate(45deg);
+      top: 8px;
+      -webkit-transition: transform 0.5s ease-out;
+      -moz-transition: transform 0.5s ease-out;
+      -ms-transition: transform 0.5s ease-out;
+      -o-transition: transform 0.5s ease-out;
+      transition: transform 0.5s ease-out;
+    }
+    &:before {
+      right: 18px;
+    }
+    &:after {
+      right: 10px;
+    }
+    &:hover {
+      background-color: $button-hover-color;
+      &:before {
+        right: 12px;
+      }
+      &:after {
+        right: 4px;
+      }
+    }
+  }
+  button:disabled,
+  button[disabled] {
+    &:hover {
+      &:before {
+        right: 18px;
+      }
+      &:after {
+        right: 10px;
+      }
+    }
+  }
+}

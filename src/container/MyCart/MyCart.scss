@@ -1,0 +1,57 @@
+@import "../../scss/base/index";
+
+.my-cart-wrapper {
+  margin-bottom: 30px;
+  .description {
+    margin-bottom: 10px;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+  .column-labels {
+    border: 1px solid $primary-color;
+    border-left: none;
+    border-right: none;
+    label {
+      display: inline-block;
+      font-weight: bold;
+    }
+    label:first-child {
+      width: 60%;
+      @include desktop {
+        width: 80%;
+      }
+    }
+  }
+  .cart-products {
+    .product-row {
+      display: flex;
+      border-bottom: 1px solid $primary-color;
+      padding: 20px 0;
+      .product {
+        display: flex;
+        width: 60%;
+        @include desktop {
+          width: 80%;
+        }
+        .product-image {
+          margin: 0 20px 0 10px;
+          img {
+            max-height: 60px;
+            @include desktop {
+              max-height: 90px;
+            }
+          }
+        }
+      }
+      .total-price {
+        width: 30%;
+        @include desktop {
+          width: 15%;
+        }
+      }
+      .delete-btn img {
+        max-height: 20px;
+      }
+    }
+  }
+}
